@@ -2,7 +2,7 @@ package com.nt;
 
 import java.util.function.Predicate;
 
-public class Predicate {
+public class PredicateDemo {
 	public static void main(String[] args) {
 		Employee emp = new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0);
 //		check if Employee has salary greater than 2000
@@ -10,7 +10,7 @@ public class Predicate {
 		System.out.println(p1.test(emp));
 
 //		check if Employee is male or female
-		Predicate<Employee> p2 = (emp1) -> emp1.getGender().equalsIgnoreCase("Female");
+		java.util.function.Predicate<Employee> p2 = (emp1) -> emp1.getGender().equalsIgnoreCase("Female");
 		System.out.println(p2.test(emp));
 //		checking two conditions
 		Predicate<Employee> and2 = p1.and(p2);
