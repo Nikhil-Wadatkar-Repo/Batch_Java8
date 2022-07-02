@@ -2,7 +2,7 @@ package com.nt;
 
 import java.util.function.Predicate;
 
-public class DemoTest implements GetInformation {
+public class DemoPredicate {
 
 	public static void main(String[] args) {
 
@@ -18,21 +18,15 @@ public class DemoTest implements GetInformation {
 		Predicate<Employee> and2 = p1.and(p2);
 		System.out.println(and2.test(emp));
 
-		Predicate<Employee> emp2= employee-> employee.getAge()>32;
-		
+		Predicate<Employee> emp2 = employee -> employee.getAge() > 32;
+
+		// or predicate
 		Predicate<Employee> or = emp2.or(p2);
 		System.out.println(or.test(emp));
-	}
 
-	@Override
-	public String showName() {
-		return "Ankur";
-	}
-
-	@Override
-	public String showSurname() {
-//		return GetInformation.super.showSurname();
-		return "subclass method";
+		Predicate<Employee> orr = (employee) -> employee.getAge() != 32;
+		Predicate<Employee> negate = orr.negate();
+		System.out.println(negate.test(emp));
 	}
 
 }

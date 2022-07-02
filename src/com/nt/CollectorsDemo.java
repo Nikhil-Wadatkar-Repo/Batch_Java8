@@ -18,7 +18,7 @@ public class CollectorsDemo {
 		uniqueCity.forEach(System.out::println);
 		
 		Map<Integer,String> map=Stream.of(cities).collect(Collectors.toMap(String::length, String::toString));
-		Map<Object, Object> squares=Stream.of(numbers).map(num-> num).collect(Collectors.toMap(num->num, (num)->num*num));
+//		Map<Object, Object> squares=Stream.of(numbers).map(num-> num).collect(Collectors.toMap(num->num, (num)->num*num));
 		
 		
 		
