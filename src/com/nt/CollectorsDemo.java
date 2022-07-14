@@ -60,6 +60,17 @@ public class CollectorsDemo {
 		System.out.println(sum.getMax());
 		System.out.println(sum.getMin());
 		System.out.println(sum.getSum());
+		String[] cities1 = new String[] { "Pune", "Banglore", "Hyderabad" ,"Hyderabad"};
+		List<String> city1= Stream.of(cities).collect(Collectors.toList());
+		
+		Set<String> uniqueCity1=Stream.of(cities1).collect(Collectors.toSet());
+		uniqueCity1.forEach(System.out::println);
+		
+		Map<Integer,String> map=Stream.of(cities).collect(Collectors.toMap(String::length, String::toString));
+//		Map<Object, Object> squares=Stream.of(numbers).map(num-> num).collect(Collectors.toMap(num->num, (num)->num*num));
+		
+		
+		
 	}
 
 }
