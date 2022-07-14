@@ -6,12 +6,12 @@ public class MRDemo {
 		// implement interface using lambda expression
 		PersonInfo personInfo = (name) -> name.toUpperCase();
 
-		// MR to non-static: object::instance_method_name
+		//MR to non-static: object::instance_method_name
 
 		// creating object of PersonDetails
 		PersonDetails obj = new PersonDetails();
 		// sending reference to instance method of class
-//		PersonInfo personInfo = obj::getNameInBlockLetters;
+		//PersonInfo personInfo = obj::getNameInBlockLetters;
 
 		String nameInUppercase = personInfo.getNameInUppercase("nana");
 		System.out.println("Name: " + nameInUppercase);
