@@ -18,6 +18,3 @@ public class ApolloHospital implements EmployeeDetails {
 	}
 }
 // comment is added by ankur
-<<<<<<< .mine// comment is added by puja
-=======// comment is added by mandavi
->>>>>>> .theirs
